@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Age Range</title>
+</head>
+
+<body>
+  <script>
+    var age = 86;
+    var amountOfSale = 27.95;
+    var discountCode = "a";
+    var discountRate;
+
+    if (age < 18) {
+      document.write("<h1>You’re just a pup!</h1>");
+    } else if (age >= 18 && age <= 29) {
+      document.write("Welcome to young adulthood... Have fund now (while you can!");
+    } else if (age >= 30 && age <= 39) {
+      document.write("It’s time to get serious about career and family");
+    } else if (age >= 40 && age <= 49) {
+      document.write("Time to start thinking about retirement. Make sure you’re saving");
+    } else if (age >= 50 && age <= 59) {
+      document.write("Enjoy your life now! You’ve dont well");
+    } else if (age >= 60 && age > 85) {
+      document.write("60 is the new 40. Do something exciting!");
+    } else if (age > 100) {
+      document.write("OMG! You still alive!");
+    }
+
+    switch (discountCode) {
+      case "A":
+      case "a":
+        discountRate = 0.0325;
+        break;
+      case "B":
+      case "b":
+        discountRate = 0.05;
+        break;
+      case "C":
+      case "c":
+        discountRate = 0.075;
+        break;
+      case "D":
+      case "d":
+        discountRate = 0.10;
+        break;
+      default:
+        discountRate = undefined;
+    }
+    var FinalAmount = amountOfSale - (amountOfSale * discountRate);
+    document.write("<br/> Amount of Sale: $ " + FinalAmount);
+  </script>
+</body>
+
+</html>
